@@ -228,7 +228,7 @@ command mv juga dapat digunakan untuk mengubah nama file dan direktori. Untuk me
 $ mv test testing
 ```
 
-<h3>Meng-copy File dan Direktori dengan "cp"/h3>
+<h3>Meng-copy File dan Direktori dengan "cp"</h3>
 
 Command `cp` dapat membuat copy dari item yang sudah ada. Misalnya, kamu ida meng-copy `file3` ke file baru bernama `file4`
 
@@ -277,3 +277,4 @@ Untuk menghapus direktori yang tidak kosong, gunakan command `rm` dengan opsi `-
 $ rm -r lagi
 ```
 
+Sekian yang dapat saya sampaikan, mohon maaf apabila ada salah kata atau kekurangan dalam penyampaian. Akhir kata, Wassalam
