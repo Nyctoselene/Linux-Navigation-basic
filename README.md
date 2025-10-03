@@ -196,7 +196,7 @@ $ mkdir test
 Kamu bisa membuat direktori dalam direktori `test` dengan nama `contoh` dengan mengetik:
 
 ```
-$ mkdir test/example
+$ mkdir test/contoh
 ```
 
 Agar command di atas bekerja, apstikan direktori `test` sudah ada. Agar `mkdir` dapat membuat direktori yang dibutuhkan untuk membangun direktoti yang diberikan, gunakan opsi `-p`. Opsi ini memungkinkanmu untuk membuat direktori bersarang dalam satu langkah. Kamu dapat membuat struktur yang terlihat seperti `direktori/lainnya` dengan mengetik:
@@ -222,6 +222,58 @@ $ cd
 $ mv test/file1 .
 ```
 
+command mv juga dapat digunakan untuk mengubah nama file dan direktori. Untuk mengubah direktori `test` menjadi `testing` kamu bisa mengetik:
 
+```
+$ mv test testing
+```
 
+<h3>Meng-copy File dan Direktori dengan "cp"/h3>
+
+Command `cp` dapat membuat copy dari item yang sudah ada. Misalnya, kamu ida meng-copy `file3` ke file baru bernama `file4`
+
+```
+$ cp  file3 file4
+```
+
+Untuk meng-copy seluruh direktori, kamu harus menyertakan opsi `-r` ke command. `-r` ini berarti "recursive" karena meng-copy direktori dengan seluruh isinya.
+
+Misalnya, untuk meng-copy struktur direktori `direktori` ke struktur baru dengan nama `lagi`, Kamu bisa mengetik:
+
+```
+ cp -r direktori lagi
+```
+
+Berbeda dengan file, di mana tujuan yang sudah ada akan menyebabkan overwrite, jika tujuan adalah direktori yang sudah ada, file atau direktori tersebut akan di-copy ke tujuan:
+
+```
+$ cp file1 lagi
+```
+
+Ini akan membuat copy daari `file1` dan menyimpannya di dalam direktori `lagi`
+
+<h3>Menghapus File dan Direktori dengan "rm" dan "rmdir"</h3>
+
+Untuk menghapus file, Kamu bisa menggunnakan command `rm`.
+
+**Note:** saat menggunakan command destruktif seperti mengahpus file dan direktori, harap sangat berhati-hati karena bisa saja Kamu tidak sengaja menghapus salah satu file penting bagi sistem secara permanen
+
+Untuk menghapus file biasa, cukup ketik command `rm`:
+
+```
+$ cd
+$ rm file4
+```
+
+Sama halnya, untuk menghapus direktori kosong, Knda dapat menggunakan command `rmdir`. Command ini hanya akan berhasil jika direktori yang bersangkutan tidak berisi apa pun. Misalnya, untuk menghapus direktori contoh di dalam direktori pengujian:
+
+```
+$ rmdir testing/contoh
+```
+
+Untuk menghapus direktori yang tidak kosong, gunakan command `rm` dengan opsi `-r` yang menghapus semua isi direktori secara rekursif, termasuk direktori itu sendiri
+
+```
+$ rm -r lagi
+```
 
