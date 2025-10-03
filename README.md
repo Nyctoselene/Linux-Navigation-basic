@@ -127,3 +127,101 @@ tcpmux          1/tcp                           # TCP port service multiplexer
 echo            7/tcp
 . . .
 ```
+Untuk scroll, gunakan arrow up dan arrow down pada keyboard. 
+Untuk mencari teks pada dokumen, kamu bisa ketik forward slash "/"diikuti dengan apa yang ingin dicari. Misalnya, untuk mencari "mail", ketik:
+
+```
+/mail
+```
+ini akan mencari melalui seluruh teks pada dokumen dan berhenti pada hasil pertama. Untuk mendapatkan hasil lain, ketik `n`:
+
+```
+n
+```
+
+Untuk berpindah ke hasil pencarian sebelumnya ketik `N`:
+
+```
+N
+```
+
+Untuk keluar dari `less`, ketik `q` untuk quit:
+
+# Mengelola File dan Direktori
+
+pada bagian ini kamu akan membuat dan mengelola file dan direktori
+
+<h3>Membuat file menggunakan "touch"</h3>
+
+Ada banyak command dan program yang dapat membuat file. Cara paling sederhana untuk membuat file adalah dengan command `touch`. Ini akan membuat file kosong dengan nama dan lokasi yang ditentuukan.
+
+Pertama, pastikan kamu berada pada direktori home, karena hanya ada direktori ini alh kamu mempunyai izin untuk menyimpan file (terkecuali jika menggunakan user root). Lalu buat file bernama file1 sebagai contoh dengan mengetik:
+
+```
+$ cd
+$ touch file1
+```
+
+Jika kamu cek isi dari direktori ini, kamu bisa melihat file yang baru saja dibuat:
+
+```
+Output
+file1
+```
+
+Jika kamu menggunakan command `touch` pada file yang sudah ada, command tersebut akan memperbarui waktu “terakhir diubah” yang terkait dengan file tersebut. 
+
+Kamu juga bisa membuat beberapa file sekaligus. Kamu bisa menggunakan absolute path juga. Misalnya, kamu bisa mengetik:
+
+```
+$ touch /home/nyctoselene/file2 /home/nyctoselene/file3
+$ ls
+```
+```
+Output
+file1 file2 file3
+```
+
+<h3>Membuat Direktori Menggunakan "mkdir"</h3>
+
+Mirip dengan command `touch`, command mkdir memungkinkanmu untuk membuat direktori kosong.
+
+Misalnya, untuk membuat direktori pada direktori home denagn nama `test`, Kamu bisa mengetik:
+
+```
+$ cd 
+$ mkdir test
+```
+
+Kamu bisa membuat direktori dalam direktori `test` dengan nama `contoh` dengan mengetik:
+
+```
+$ mkdir test/example
+```
+
+Agar command di atas bekerja, apstikan direktori `test` sudah ada. Agar `mkdir` dapat membuat direktori yang dibutuhkan untuk membangun direktoti yang diberikan, gunakan opsi `-p`. Opsi ini memungkinkanmu untuk membuat direktori bersarang dalam satu langkah. Kamu dapat membuat struktur yang terlihat seperti `direktori/lainnya` dengan mengetik:
+
+```
+mkdir -p direktori/lainnya
+```
+
+Command ini akan membuat direktori `direktori` terlebih dahulu, kemudian akan membuat direktori `lainnya`
+
+<h3>Memindahkan dan Mengganti Nama File dan Direktori</h3>
+
+Kamu bisa memindahkan file ke tujuan baru dengan command `mv`. Misalnya, kamu ingin memindakhan `file1` ke direktori `test` dengan mengetik:
+
+```
+$ mv file1 test
+```
+
+Kamu bisa memindahkan kembali ke direktori home dengan menggunakan dot spesial untuk merujuk ke direktori saat nii. Pastikan kamu berada di direktori home, lalu jalankan command `mv`:
+
+```
+$ cd
+$ mv test/file1 .
+```
+
+
+
+
